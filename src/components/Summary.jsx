@@ -8,29 +8,29 @@ export default function Summary({ userAnswers }) {
   );
 
   const skippedAnswersShare = Math.round(
-    (skippedAnswers.length / userAnswers.length) * 100
+    (skippedAnswers.length / userAnswers.length) * 100,
   );
   const correctAnswersShare = Math.round(
-    (correctAnswers.length / userAnswers.length) * 100
+    (correctAnswers.length / userAnswers.length) * 100,
   );
 
-  const wrongAnswersShare = 100- skippedAnswersShare - correctAnswersShare;
+  const wrongAnswersShare = 100 - skippedAnswersShare - correctAnswersShare;
   return (
     <div id='summary'>
       <img src={quizCompleteImg} alt='Trophy Icon' />
-      <h2>Quiz Completed!</h2>
+      <h2>Quiz Completed!!</h2>
       <div id='summary-stats'>
         <p>
           <span className='number'>{skippedAnswersShare}%</span>
-          <span className='text'>skipped</span>
+          <span className='text'>Skipped</span>
         </p>
         <p>
           <span className='number'>{correctAnswersShare}%</span>
-          <span className='text'>answered correctly</span>
+          <span className='text'>Answered Correctly</span>
         </p>
         <p>
           <span className='number'>{wrongAnswersShare}%</span>
-          <span className='text'>answered incorrectly</span>
+          <span className='text'>Answered Incorrectly</span>
         </p>
       </div>
       <ol>
